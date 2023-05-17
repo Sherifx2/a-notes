@@ -1,4 +1,24 @@
 import './App.css'
+import brain from "./assets/brain.jpg"
+import chassis from "./assets/chassis.jpg"
+import cpu from "./assets/cpu.jpg"
+import inputDevices from "./assets/input-devices.jpg"
+import longTermMemory from "./assets/long-term-memory.jpg"
+import motherboard from "./assets/motherboard.jpg"
+import natureNurture from "./assets/nature-nurture.jpg"
+import outputDevices from "./assets/output-devices.jpg"
+import powerSupply from "./assets/power-supply.jpg"
+import ram from "./assets/ram.jpg"
+import senses from "./assets/senses.jpg"
+import shortTermMemory from "./assets/short-term-memory.jpg"
+import skinNBones from "./assets/skin-n-bones.jpg"
+import software from "./assets/software.jpg"
+import speechMovement from "./assets/speech-movement.jpg"
+import spinalCord from "./assets/spinal-cord.jpg"
+import stomach from "./assets/stomach.jpg"
+import storage from "./assets/storage.jpg"
+
+
 
 function App() {
 
@@ -455,9 +475,9 @@ function App() {
             <div className='bg-neutral-100 border-black dark:border-white dark:bg-neutral-900 p-4 rounded-2xl m-2 mb-4 w-160 flex flex-col border'>
               <h3 className='text-3xl mb-2'>Chassis = Skin & Bones</h3>
               <div className="h-40 flex">
-                <img src="../src/assets/chassis.jpg" className='' alt="Chassis" />
+                <img src={chassis} className='' alt="Chassis" />
                 <span className='text-9xl mx-2'>=</span>
-                <img src="../src/assets/skin-n-bones.jpg" alt="Skin and Bones" />
+                <img src={skinNBones} alt="Skin and Bones" />
               </div>
               <ul className='my-4'>
                 <li>Provides a framework where everything else fits.</li>
@@ -470,9 +490,9 @@ function App() {
             <div className='bg-neutral-100 border-black dark:border-white dark:bg-neutral-900 p-4 rounded-2xl m-2 mb-4 w-160 flex flex-col border'>
               <h3 className='text-3xl mb-2'>Motherboard = Spinal Cord</h3>
               <div className="h-40 flex">
-                <img src="../src/assets/motherboard.jpg" className='' alt="Motherboard" />
+                <img src={motherboard} className='' alt="Motherboard" />
                 <span className='text-9xl mx-2'>=</span>
-                <img src="../src/assets/spinal-cord.jpg" alt="Spinal Cord" />
+                <img src={spinalCord} alt="Spinal Cord" />
               </div>
               <ul className='my-4'>
                 <li>What everything "plugs into."</li>
@@ -486,9 +506,9 @@ function App() {
             <div className='bg-neutral-100 border-black dark:border-white dark:bg-neutral-900 p-4 rounded-2xl m-2 mb-4 w-160 flex flex-col border'>
               <h3 className='text-3xl mb-2'>CPU = Brain</h3>
               <div className="h-40 flex">
-                <img src="../src/assets/cpu.jpg" className='' alt="RAM" />
+                <img src={cpu} className='' alt="RAM" />
                 <span className='text-9xl mx-2'>=</span>
-                <img src="../src/assets/brain.jpg" alt="Brain" />
+                <img src={brain} alt="Brain" />
               </div>
               <ul className='my-4'>
                 <li>Processes all incoming and outgoing information.</li>
@@ -502,9 +522,9 @@ function App() {
             <div className='bg-neutral-100 border-black dark:border-white dark:bg-neutral-900 p-4 rounded-2xl m-2 mb-4 w-160 flex flex-col border'>
               <h3 className='text-3xl mb-2'>Ram = Short Term Memory</h3>
               <div className="h-40 flex">
-                <img src="../src/assets/ram.jpg" className='mb-4 w-52' alt="RAM" />
+                <img src={ram} className='mb-4 w-52' alt="RAM" />
                 <span className='text-9xl mx-2'>=</span>
-                <img src="../src/assets/short-term-memory.jpg" alt="Short Term Memory" />
+                <img src={shortTermMemory} alt="Short Term Memory" />
               </div>
               <ul className='my-4'>
                 <li>Can only hold so much information at one time.</li>
@@ -518,9 +538,9 @@ function App() {
             <div className='bg-neutral-100 border-black dark:border-white dark:bg-neutral-900 p-4 rounded-2xl m-2 mb-4 w-160 flex flex-col border'>
               <h3 className='text-3xl mb-2'>Storage = Long Term Memory</h3>
               <div className="h-40 flex">
-                <img src="../src/assets/storage.jpg" className='' alt="Storage" />
+                <img src={storage} className='' alt="Storage" />
                 <span className='text-9xl mx-2'>=</span>
-                <img src="../src/assets/long-term-memory.jpg" alt="Long Term Memory" />
+                <img src={longTermMemory} alt="Long Term Memory" />
               </div>
               <ul className='my-4'>
                 <li>Holds <b>FAR</b> more information than our Short Term memory.</li>
@@ -534,9 +554,9 @@ function App() {
             <div className='bg-neutral-100 border-black dark:border-white dark:bg-neutral-900 p-4 rounded-2xl m-2 mb-4 w-160 flex flex-col border'>
               <h3 className='text-3xl mb-2'>Power Supply = Stomach/ GITract</h3>
               <div className="h-40 flex">
-                <img src="../src/assets/power-supply.jpg" className='' alt="Power Supply" />
+                <img src={powerSupply}className='' alt="Power Supply" />
                 <span className='text-9xl mx-2'>=</span>
-                <img src="../src/assets/stomach.jpg" alt="Stomach" />
+                <img src={stomach} alt="Stomach" />
               </div>
               <ul className='my-4'>
                 <li>Provides us with fuel.</li>
@@ -550,9 +570,9 @@ function App() {
             <div className='bg-neutral-100 border-black dark:border-white dark:bg-neutral-900 p-4 rounded-2xl m-2 mb-4 w-160 flex flex-col border'>
               <h3 className='text-3xl mb-2'>Input Devices = Senses</h3>
               <div className="h-40 flex">
-                <img src="../src/assets/input-devices.jpg" className='' alt="Input Devices" />
+                <img src={inputDevices} className='' alt="Input Devices" />
                 <span className='text-9xl mx-2'>=</span>
-                <img src="../src/assets/senses.jpg" alt="Senses" />
+                <img src={senses} alt="Senses" />
               </div>
               <ul className='my-4'>
                 <li>How you receive information from the outside world.</li>
@@ -566,9 +586,9 @@ function App() {
             <div className='bg-neutral-100 border-black dark:border-white dark:bg-neutral-900 p-4 rounded-2xl m-2 mb-4 w-160 flex flex-col border'>
               <h3 className='text-3xl mb-2'>Output Devices = Speech & Movement</h3>
               <div className="h-40 flex">
-                <img src="../src/assets/output-devices.jpg" alt="Output Devices" />
+                <img src={outputDevices} alt="Output Devices" />
                 <span className='text-9xl mx-2'>=</span>
-                <img src="../src/assets/speech-movement.jpg" className='' alt="Speech & Movement" />
+                <img src={speechMovement} className='' alt="Speech & Movement" />
               </div>
               <ul className='my-4'>
                 <li>Lets us communicate with the world and people around us.</li>
@@ -582,9 +602,9 @@ function App() {
             <div className='bg-neutral-100 border-black dark:border-white dark:bg-neutral-900 p-4 rounded-2xl m-2 mb-4 w-160 flex flex-col border'>
               <h3 className='text-3xl mb-2'>Software = Nature vs Nurture</h3>
               <div className="h-40 flex">
-                <img src="../src/assets/software.jpg" alt="Software" />
+                <img src={software} alt="Software" />
                 <span className='text-9xl mx-2'>=</span>
-                <img src="../src/assets/nature-nurture.jpg" className='' alt="Nature vs Nurture" />
+                <img src={natureNurture} className='' alt="Nature vs Nurture" />
               </div>
               <ul className='my-4'>
                 <li>Provides us with context.</li>
