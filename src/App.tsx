@@ -1,4 +1,7 @@
 import './App.css'
+import northbridgeSouthbridge from "./assets/northbridge-southbridge.svg"
+import northbridgeSouthbridge2 from "./assets/northbridge-southbridge2.png"
+
 import brain from "./assets/brain.jpg"
 import chassis from "./assets/chassis.jpg"
 import cpu from "./assets/cpu.jpg"
@@ -17,6 +20,21 @@ import speechMovement from "./assets/speech-movement.jpg"
 import spinalCord from "./assets/spinal-cord.jpg"
 import stomach from "./assets/stomach.jpg"
 import storage from "./assets/storage.jpg"
+import isaExpansion from "./assets/isa-expansion.jpg"
+import pciExpansion from "./assets/pci-expansion.jpg"
+import pcixExpansion from "./assets/pcix-expansion.jpg"
+import pcieExpansion from "./assets/pcie-expansion.jpg"
+import minipciExpansion from "./assets/minipci-expansion.jpg"
+import agpExpansion from "./assets/agp-expansion.jpg"
+import pataConnector from "./assets/pataconnector.jpg"
+import sataConnector from "./assets/sataConnector.jpg"
+import ps2Ports from "./assets/ps2Ports.jpg"
+import rj45Port from "./assets/rj45Port.jpg"
+import serialPort from "./assets/serialPort.jpg"
+import db25Port from "./assets/db25Port.jpg"
+import svgaPort from "./assets/svgaPort.jpg"
+import eighthConnector from "./assets/eighthConnector.jpg"
+
 
 
 
@@ -25,7 +43,7 @@ function App() {
   return (
     <div className='flex'>
       {/* nav */}
-      <div className='fixed text-left mb-4 min-w-[20em]'>
+      <div className='nav-side fixed text-left mb-4 min-w-[20em]'>
 
         <div className="absolute inset-0 p-4 w-full h-screen overflow-y-scroll inline-block">
 
@@ -518,7 +536,7 @@ function App() {
                 <a href="#mac-os-tools" className='hover:underline mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Mac OS Tools</a>
               </li>
               <li>
-                <a href="#mac-os-features"mac-os-features className='hover:underline mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Mac OS features</a>
+                <a href="#mac-os-features" mac-os-features className='hover:underline mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Mac OS features</a>
               </li>
               <li>
                 <a href="#linux-best-practices" className='hover:underline mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Linux Best Practices</a>
@@ -567,21 +585,23 @@ function App() {
           <div className="h-20"></div>
         </div>
       </div>
-      <div className="min-w-[20em]"></div>
+      <div className="nav-side min-w-[20em]"></div>
 
       {/* main */}
-      <main className="text-left px-24">
+      <main className="text-left">
         {/* Module 1 */}
         <div id="module-1" className='p-2'>
           <h1 className='mb-10'>A+ Introduction</h1>
 
           {/* What is a computer */}
-          <div id="what-is-a-computer" className='text-left mb-10'>
-            <strong>
-              <a href="#what-is-a-computer" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>What is a computer?</a>
-            </strong>
-            <h3 className='text-3xl mb-2'>The definition of a computer has changed several times throughout human history. Below are some definitions and their respective dates</h3>
-            <ul className='ml-12 flex flex-col gap-3 text-xl'>
+          <div id="what-is-a-computer" className='text-left'>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#what-is-a-computer" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>What is a computer?</a>
+              </strong>
+            </div>
+            <h2 className='mt-4 mb-2'>The definition of a computer has changed several times throughout human history.</h2>
+            <ul className='mb-4 flex flex-col gap-3 text-xl ml-4 list-disc list-inside'>
               <li><b className='mr-2'>1613:</b>A person who makes calculations or computations.</li>
               <li><b className='mr-2'>1869:</b>A device or machine for performing facilitating calculations.</li>
               <li><b className='mr-2'>1946</b>An electronic device (or system of devices) which is used to store, manipulate, and communicate information, perform complex calculations, or control or regulate other devices or machines and is capable of receiving information (data) and of processing it in accordance with variable procedural instructions. (programs or software)</li>
@@ -590,19 +610,19 @@ function App() {
           <div id="computer-to-body-parts">
 
             {/* Computer to body parts */}
-            <strong>
-              <a href="#computer-to-body-parts" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Computer to Body Parts</a>
-            </strong>
-
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#computer-to-body-parts" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Computer to Body Parts</a>
+              </strong>
+            </div>
             {/* Chassis = Skin & Bones */}
-            <div className='bg-neutral-100 border-black dark:border-white dark:bg-neutral-900 p-4 rounded-2xl m-2 mb-4 w-160 flex flex-col border'>
+            <div className='mt-4 p-4 m-2 mb-4 w-160 flex flex-col'>
               <h3 className='text-3xl mb-2'>Chassis = Skin & Bones</h3>
               <div className="h-40 flex">
                 <img src={chassis} className='' alt="Chassis" />
-                <span className='text-9xl mx-2'>=</span>
                 <img src={skinNBones} alt="Skin and Bones" />
               </div>
-              <ul className='my-4'>
+              <ul className='text-lg m-4 list-disc'>
                 <li>Provides a framework where everything else fits.</li>
                 <li>Protects the inside from the elements of the outside.</li>
                 <li>Allows internal functions to operate optimally.</li>
@@ -610,14 +630,13 @@ function App() {
 
             </div>
             {/* Motherboard = Spinal Cord */}
-            <div className='bg-neutral-100 border-black dark:border-white dark:bg-neutral-900 p-4 rounded-2xl m-2 mb-4 w-160 flex flex-col border'>
+            <div className=' p-4 m-2 mb-4 w-160 flex flex-col '>
               <h3 className='text-3xl mb-2'>Motherboard = Spinal Cord</h3>
               <div className="h-40 flex">
                 <img src={motherboard} className='' alt="Motherboard" />
-                <span className='text-9xl mx-2'>=</span>
                 <img src={spinalCord} alt="Spinal Cord" />
               </div>
-              <ul className='my-4'>
+              <ul className='text-lg m-4 list-disc'>
                 <li>What everything "plugs into."</li>
                 <li>Allows brain to speak with different body parts.</li>
                 <li>Allows different body parts to speak with the brain.</li>
@@ -626,14 +645,13 @@ function App() {
             </div>
 
             {/* CPU = Brain */}
-            <div className='bg-neutral-100 border-black dark:border-white dark:bg-neutral-900 p-4 rounded-2xl m-2 mb-4 w-160 flex flex-col border'>
+            <div className='p-4 m-2 mb-4 w-160 flex flex-col'>
               <h3 className='text-3xl mb-2'>CPU = Brain</h3>
               <div className="h-40 flex">
                 <img src={cpu} className='' alt="RAM" />
-                <span className='text-9xl mx-2'>=</span>
                 <img src={brain} alt="Brain" />
               </div>
-              <ul className='my-4'>
+              <ul className='text-lg m-4 list-disc'>
                 <li>Processes all incoming and outgoing information.</li>
                 <li>Extremely complex and fast.</li>
                 <li>Without it, we are alive, but not aware.</li>
@@ -642,14 +660,13 @@ function App() {
             </div>
 
             {/* RAM = Short Term Memory */}
-            <div className='bg-neutral-100 border-black dark:border-white dark:bg-neutral-900 p-4 rounded-2xl m-2 mb-4 w-160 flex flex-col border'>
+            <div className='p-4 m-2 mb-4 w-160 flex flex-col'>
               <h3 className='text-3xl mb-2'>Ram = Short Term Memory</h3>
               <div className="h-40 flex">
                 <img src={ram} className='mb-4 w-52' alt="RAM" />
-                <span className='text-9xl mx-2'>=</span>
                 <img src={shortTermMemory} alt="Short Term Memory" />
               </div>
-              <ul className='my-4'>
+              <ul className='text-lg m-4 list-disc'>
                 <li>Can only hold so much information at one time.</li>
                 <li>Extremely complex and fast.</li>
                 <li>Only "runs" while we're aware/awake.</li>
@@ -658,14 +675,13 @@ function App() {
             </div>
 
             {/* Storage = Long Term Memory */}
-            <div className='bg-neutral-100 border-black dark:border-white dark:bg-neutral-900 p-4 rounded-2xl m-2 mb-4 w-160 flex flex-col border'>
+            <div className='p-4 m-2 mb-4 w-160 flex flex-col '>
               <h3 className='text-3xl mb-2'>Storage = Long Term Memory</h3>
               <div className="h-40 flex">
                 <img src={storage} className='' alt="Storage" />
-                <span className='text-9xl mx-2'>=</span>
                 <img src={longTermMemory} alt="Long Term Memory" />
               </div>
-              <ul className='my-4'>
+              <ul className='text-lg m-4 list-disc'>
                 <li>Holds <b>FAR</b> more information than our Short Term memory.</li>
                 <li>Allows us to store information for later use.</li>
                 <li>Information <b>ALWAYS</b> remains there.</li>
@@ -674,14 +690,13 @@ function App() {
             </div>
 
             {/* Stomace/GITract = Power Supply */}
-            <div className='bg-neutral-100 border-black dark:border-white dark:bg-neutral-900 p-4 rounded-2xl m-2 mb-4 w-160 flex flex-col border'>
+            <div className='p-4 m-2 mb-4 w-160 flex flex-col'>
               <h3 className='text-3xl mb-2'>Power Supply = Stomach/ GITract</h3>
               <div className="h-40 flex">
                 <img src={powerSupply} className='' alt="Power Supply" />
-                <span className='text-9xl mx-2'>=</span>
                 <img src={stomach} alt="Stomach" />
               </div>
-              <ul className='my-4'>
+              <ul className='text-lg m-4 list-disc'>
                 <li>Provides us with fuel.</li>
                 <li>"Feeds" all internal processes.</li>
                 <li>Without it, we will eventually die.</li>
@@ -690,14 +705,13 @@ function App() {
             </div>
 
             {/* Senses = input devices */}
-            <div className='bg-neutral-100 border-black dark:border-white dark:bg-neutral-900 p-4 rounded-2xl m-2 mb-4 w-160 flex flex-col border'>
+            <div className='p-4 m-2 mb-4 w-160 flex flex-col'>
               <h3 className='text-3xl mb-2'>Input Devices = Senses</h3>
               <div className="h-40 flex">
                 <img src={inputDevices} className='' alt="Input Devices" />
-                <span className='text-9xl mx-2'>=</span>
                 <img src={senses} alt="Senses" />
               </div>
-              <ul className='my-4'>
+              <ul className='text-lg m-4 list-disc'>
                 <li>How you receive information from the outside world.</li>
                 <li>Different senses for different types of information.</li>
                 <li>Gives our brains information to process.</li>
@@ -706,14 +720,13 @@ function App() {
             </div>
 
             {/* Speech & Movement = output devices */}
-            <div className='bg-neutral-100 border-black dark:border-white dark:bg-neutral-900 p-4 rounded-2xl m-2 mb-4 w-160 flex flex-col border'>
+            <div className='p-4 m-2 mb-4 w-160 flex flex-col'>
               <h3 className='text-3xl mb-2'>Output Devices = Speech & Movement</h3>
               <div className="h-40 flex">
                 <img src={outputDevices} alt="Output Devices" />
-                <span className='text-9xl mx-2'>=</span>
                 <img src={speechMovement} className='' alt="Speech & Movement" />
               </div>
-              <ul className='my-4'>
+              <ul className='text-lg m-4 list-disc'>
                 <li>Lets us communicate with the world and people around us.</li>
                 <li>Allows us to convert thoughts into actions.</li>
                 <li>Permits others to process and comment on our ideas.</li>
@@ -722,14 +735,13 @@ function App() {
             </div>
 
             {/* Nature vs Nurture = Software */}
-            <div className='bg-neutral-100 border-black dark:border-white dark:bg-neutral-900 p-4 rounded-2xl m-2 mb-4 w-160 flex flex-col border'>
+            <div className='p-4 m-2 mb-4 w-160 flex flex-col'>
               <h3 className='text-3xl mb-2'>Software = Nature vs Nurture</h3>
               <div className="h-40 flex">
                 <img src={software} alt="Software" />
-                <span className='text-9xl mx-2'>=</span>
                 <img src={natureNurture} className='' alt="Nature vs Nurture" />
               </div>
-              <ul className='my-4'>
+              <ul className='text-lg m-4 list-disc'>
                 <li>Provides us with context.</li>
                 <li>Provides language to voice, meaning to gesture.</li>
                 <li>A "guide" for dealing with the world around us.</li>
@@ -741,41 +753,397 @@ function App() {
         </div>
         {/* module 2 */}
         <div id="module-2" className='p-2'>
-          <h1 className='mb-10'>Motherboard</h1>
+          <h1 className=''>Motherboard</h1>
           <div id="chipset-busses">
-            <strong>
-              <a href="#chipset-busses" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Chipsets & Busses</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#chipset-busses" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Chipsets & Busses</a>
+              </strong>
+            </div>
+            <h2>Chipset:</h2>
+            <p className='ml-3'>A group of integrated circuts or chips, that are designed to work together and are usually marketed as a single product</p>
+            <h2>Bus:</h2>
+            <p className='ml-3'>One wire or a group of wires that carry data from one place to another</p>
+            <h2>Parallel VS. Serial</h2>
+            <p><b className='ml-3 mr-1'>Serial-</b>Sending <b>ONE</b> bit of data at a time</p>
+            <p><b className='ml-3 mr-1'>Parallel-</b>Sending <b>MULTIPLE</b> bits of data at a time</p>
+            <h2>Bit vs Byte</h2>
+            <ul className='list-disc list-inside ml-3'>
+              <li>A bit is the smallest bit of data a computer can process and store </li>
+              <li>Often referred to as a 1 or a 0 representing the states of either on or off</li>
+              <li>Bit is represented by a lowercase <b>b</b> Byte is represented by an upper case <b>B</b></li>
+              <li>There are 8 <b>bits</b> in one <b>Byte</b></li>
+              <li>There are 1024 (2^10) bytes in a Kilobyte</li>
+              <li>There are 1024 Kilobytes (2^20 bytes) in a Megabyte</li>
+              <li>There are 1024 Megabytes (2^30 bytes) in a Gigabyte</li>
+              <li>There are 1024 gigabytes (2^40 bytes) in a Terabyte</li>
+              <li>There are 1024 Terabytes (2^50 bytes) in a Petabyte</li>
+              <li>1Mbps = 125Kbps</li>
+            </ul>
+            <h2>Lane:</h2>
+            <p>Two serial wires that enable the sending and receiving of data simutaneously</p>
+            <h2>Two Main Motherboard Chipset Manufacturers</h2>
+            <div className="ml-3">
+              <p>Intel</p>
+              <p>AMD</p>
+            </div>
+            <h2>Two main chips controlling comunication</h2>
+            <div className="ml-3">
+              <h3>Northbridge</h3>
+              <ul className='list-disc list-inside'>
+                <li>Responsible for high data transfer devices</li>
+                <li>Also called memory Memory Controller Hub (MHC)</li>
+                <li>High Speed Graphics</li>
+                <li>Memory (RAM)</li>
+              </ul>
+              <h3>Southbridge</h3>
+              <ul className='list-disc list-inside'>
+                <li>Also called i/o Controller Hub (IHC)</li>
+                <li>Secondary controllers (anything other than RAM and high speed graphics)</li>
+                <li>Hard drives, USB, ethernet, ex..</li>
+              </ul>
+              <div className="flex gap-2 flex-wrap">
+                <div className="">
+                  <img className='h-[30em] w-[20em] northbridge-southbridge' src={northbridgeSouthbridge} alt="Northbridge-southbridge diagram" />
+                </div>
+                <div className="">
+                  <img className='h-[30em] w-[20em] northbridge-southbridge' src={northbridgeSouthbridge2} alt="Northbridge-southbridge diagram" />
+                </div>
+              </div>
+
+              <p>Northbridge and Southbridge are connected via the internal bus, or direct media interface</p>
+            </div>
+            <h2>Bus that connects the CPU to motherboard</h2>
+            <div className="ml-3">
+              <p><b>Intel:</b> Front Side Bus (FSB)</p>
+              <p><b>AMD:</b> Hypertransport</p>
+              <p>Both of these carry data from the CPU to the Northbridge, then by design goes to the south bridge/ rest of the motherboard </p>
+            </div>
+            <h2>Memory Bus</h2>
+            <div className="ml-3">
+
+              <p>Memory Bus goes straight from ram to north bridge</p>
+            </div>
+            <h2>Expansion Bus</h2>
+            <div className="ml-3">
+              <p> Expansion bus is any other bus that lets you expand the motherboard</p>
+            </div>
+
+
           </div>
 
           <div id="expansion-busses-and-storage">
-            <strong>
-              <a href="#expansion-busses-and-storage" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Expansion Busses & Storage Technology</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#expansion-busses-and-storage" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Expansion Busses & Storage Technology</a>
+              </strong>
+            </div>
+            <h2>Expansion Busses</h2>
+            <ul className='ml-3 list-disc list-inside'>
+              <li>ISA</li>
+              <li>PCI</li>
+              <li>PCIx</li>
+              <li>PVIe</li>
+              <li>mini-PCI</li>
+              <li>AGP</li>
+              <li>AMR & CNR</li>
+              <li>PCMCIA</li>
+            </ul>
+            <h2>Storage Technology</h2>
+            <ul className='ml-3 list-disc list-inside'>
+              <li>PATA / IDE</li>
+              <li>SATA</li>
+            </ul>
+            <h2>ISA Expansion</h2>
+            <div className="ml-3">
+              <p>Industry Standart Architecture</p>
+              <img src={isaExpansion} alt="ISA Expansion" />
+              <ul className="list-disc list-inside">
+                <li>Connects 16 bits</li>
+                <li>Expansion for up to 32 bits</li>
+                <li>Not used anymore</li>
+              </ul>
+            </div>
+            <h2>PCI</h2>
+            <div className="ml-3">
+              <p>Peripheral Component Interconnect</p>
+              <img src={pciExpansion} alt="PCI Expansion" />
+              <ul className="list-disc list-inside">
+                <li>New Standard</li>
+                <li>Supports same functions as CPU/ Processor Bus</li>
+                <li>Has own assigned address space</li>
+                <li>Allows CPU and PCI bus to do their own things</li>
+              </ul>
+            </div>
+            <h2>PCIx</h2>
+            <div className="ml-3">
+              <p>Peripheral Component Interconnect Extended</p>
+              <img src={pcixExpansion} alt="pcix expansin" className='max-w-[24em]' />
+              <ul className="list-disc list-inside">
+                <li>Extended to allow for 32 bit expansion bus</li>
+              </ul>
+              <h2>PCIe</h2>
+              <p>Peripheral Component Interconnect Express</p>
+              <img src={pcieExpansion} alt="PCIe Expansion" />
+              <ul className="list-disc list-inside">
+                <li>Allows you to get really high end components</li>
+                <li>Basically replaced all other expansion busses</li>
+              </ul>
+            </div>
+            <h2>Mini-PCI</h2>
+            <div className="ml-3">
+              <p>Mini Peripheral Component Interconnect </p>
+              <img src={minipciExpansion} alt="MiniPCI Expansion" className='max-w-[20em]' />
+              <ul className="list-disc list-inside">
+                <li>Created to be smaller to fit on laptop motherboards</li>
+              </ul>
+            </div>
+            <h2>AGP</h2>
+            <div className="ml-3">
+              <p>Accelerated Graphics Port</p>
+              <img src={agpExpansion} alt="MiniPCI Expansion" />
+              <ul className='list-disc list-inside'>
+                <li>Created for laptops</li>
+                <li>Same archetecture smaller</li>
+              </ul>
+            </div>
+            <h2>AMR & CMR</h2>
+            <p>Audio Modem Riser</p>
+            <ul className="ml-3 list-disc list-inside">
+              <li>Created for Audio and Modems</li>
+              <li>Mostly replaced with PCIe</li>
+            </ul>
+            <h2>PCMCIA</h2>
+            <p>Personal Computer Memory Card International Association</p>
+            <ul className='ml-3 list-disc list-inside'>
+              <li>Slide into slot in laptop to expand</li>
+              <li>Expansion port specifically for laptops</li>
+            </ul>
+            <table>
+              <tr>
+                <th>Expansion Bus</th>
+                <th>Bus Width</th>
+                <th>Frequency</th>
+                <th>Max Data Rate</th>
+              </tr>
+              <tr>
+                <td>PCI</td>
+                <td>32-bit</td>
+                <td>
+                  33 MHz
+                  <br />
+                  66 MHz
+                </td>
+                <td>
+                  133 MB/S
+                  <br />
+                  266MB/s
+                </td>
+              </tr>
+              <tr>
+                <td>AGP</td>
+                <td>32-bit</td>
+                <td>
+                  1x = 66MHz
+                  <br />
+                  2x = 66MHz (double pumped to to 133MHz)
+                  <br />
+                  4x = 66MHz (quad pumped to 266 MHz)
+                  <br />
+                  8x = 66MHz(octo-pumped to 533MHz)
+                  <br />
+                </td>
+                <td>
+                  266 MB/s
+                  <br />
+                  533 MB/s
+                  <br />
+                  1 GB/s
+                  <br />
+                  2GB/s
+                </td>
+              </tr>
+              <tr>
+                <td>PCIe</td>
+                <td>Serial 1-16 full duplex lanes</td>
+                <td>
+                  Version 1 = 2.5 GHz
+                  <br />
+                  Version 2 = 5 GHz
+                  <br />
+                  Version 3 = 8 GHz
+                </td>
+                <td>
+                  250 MB/s per lane
+                  <br />
+                  500 MB/s per lane
+                  <br />
+                  1GB/s per lane
+                </td>
+              </tr>
+            </table>
+
+            <h2>PATA / IDE</h2>
+            <div className="ml-3">
+              <p>Parallel AT Attachment</p>
+
+              <img src={pataConnector} alt="Pata connector" />
+              <ul className='list-disc list-inside'>
+                <li>40 Pin Connector</li>
+                <li>Power in Molex Connectorr</li>
+                <li>Keyed</li>
+                <li>Connects to motherboard and up to 2 devices</li>
+              </ul>
+            </div>
+
+            <h2>SATA</h2>
+            <div className="ml-3">
+              <p>Serial AT Attachment</p>
+
+              <img src={sataConnector} alt="Pata connector" className='max-w-[25em]' />
+              <ul className='list-disc list-inside'>
+                <li>Faster and newer than Pata</li>
+                <li>Instead of data being parallel it is serial</li>
+                <li>Smaller than Pata</li>
+              </ul>
+            </div>
+
           </div>
 
+
           <div id="io-port-and-front-panel-connectors">
-            <strong>
-              <a href="#io-port-and-front-panel-connectors" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Input/Output Ports & Front Panel Connectors</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#io-port-and-front-panel-connectors" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Input/Output Ports & Front Panel Connectors</a>
+              </strong>
+            </div>
+            <h2>Older Ports</h2>
+            <ul className='ml-3 list-disc list-inside'>
+              <li>PS/2</li>
+              <li>Serial</li>
+              <li>RJ11</li>
+              <li>RJ45</li>
+              <li>Audio (1/8") Cluster</li>
+              <li>SVGA</li>
+            </ul>
+            <h2>Newer Ports</h2>
+            <ul className='ml-3 list-disc list-inside'>
+              <li>USB</li>
+              <li>DVI</li>
+              <li>HDMI Connector</li>
+              <li>IEEE 1394a (Firewire)</li>
+              <li>Optical Audio</li>
+              <li>eSATA</li>
+              <li>DisplayPort</li>
+              <li>SD/Multimedia Cards</li>
+            </ul>
+            <h2>PS 2 ports</h2>
+            <div className="ml-3">
+              <p>Responsible for keyboard and mouse</p>
+              <img src={ps2Ports} alt="ps2 ports" />
+
+              <ul className='list-disc list-inside'>
+                <li>Green is mouse</li>
+                <li>Purple is keyboard</li>
+                <li>Not Hot-swapable</li>
+                <li>Must restart computer with mouse plugged in if you pull it out</li>
+              </ul>
+            </div>
+            <h2>RJ45</h2>
+            <div className="ml-3">
+              <p>Registered Jack</p>
+              <img src={rj45Port} alt="RJ-45 Port" />
+              <ul className='list-disc list-inside'>
+                <li>Used for ethernet</li>
+                <li>Usually connects to cat 5 or 6 cable</li>
+                <li>Looks similar to RJ11 phone/modem cable</li>
+              </ul>
+            </div>
+            <h2>Serial Ports</h2>
+            <div className="ml-3">
+
+              <p>9 pin/ 15 pin</p>
+              <img src={serialPort} alt="" />
+              <ul className='list-disc list-inside'>
+                <li>Mostly used to connect external devices</li>
+                <li>Can connect external devices</li>
+                <li>Can connect modems</li>
+                <li>Also known as gaming ports</li>
+                <li>Can connect old joysticks to them</li>
+              </ul>
+            </div>
+            <h2>DB25</h2>
+            <div className="ml-3">
+              <p>Also known as LPT port</p>
+              <img src={db25Port} alt="db25 port" />
+              <ul className='list-disc list-inside'>
+                <li>Parallel port</li>
+                <li>Usually used for printers</li>
+              </ul>
+            </div>
+            <h2>Male vs Female Ports</h2>
+            <p className='ml-3'>Male ports have pins female ports have holes</p>
+            <h2>SVGA</h2>
+            <div className="ml-3">
+              <img src={svgaPort} alt="SVGA port" />
+              <ul>
+                <li>Mainly used for graphics</li>
+                <li>15 pin DB connector with 3 rows</li>
+              </ul>
+            </div>
+            <h2>1/8" Jack Connectors</h2>
+            <img src={eighthConnector} alt="1/8 Connector" />
+            <ul className='list-disc list-inside'>
+              <li>Used for audio</li>
+              <li>Up to three for line in, speaker, and mic</li>
+            </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           </div>
 
           <div id="adapters-and-converters">
-            <strong>
-              <a href="#adapters-and-converters" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Adapters and Converters</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#adapters-and-converters" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Adapters and Converters</a>
+              </strong>
+            </div>
           </div>
 
           <div id="form-factors">
-            <strong>
-              <a href="#form-factors" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Form Factors</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#form-factors" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Form Factors</a>
+              </strong>
+            </div>
           </div>
 
           <div id="bios">
-            <strong>
-              <a href="#bios" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>BIOS</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#bios" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>BIOS</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -784,21 +1152,27 @@ function App() {
           <h1 className='mb-10'>CPU</h1>
 
           <div id="technology-and-characteristics">
-            <strong>
-              <a href="#technology-and-characteristics" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Technology and Characteristics</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#technology-and-characteristics" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Technology and Characteristics</a>
+              </strong>
+            </div>
           </div>
 
           <div id="socket-types">
-            <strong>
-              <a href="#socket-types" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Socket Types</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#socket-types" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Socket Types</a>
+              </strong>
+            </div>
           </div>
 
           <div id="cooling">
-            <strong>
-              <a href="#cooling" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Cooling</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#cooling" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Cooling</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -807,25 +1181,34 @@ function App() {
           <h1 className='mb-10'>RAM</h1>
 
           <div id="memory-basics">
-            <strong>
-              <a href="#memory-basics" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Memory Basics</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#memory-basics" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Memory Basics</a>
+              </strong>
+            </div>
           </div>
 
           <div id="types-of-dram">
-            <strong>
-              <a href="#types-of-dram" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Types of DRAM</a>
-            </strong>
-          </div> <div id="ram-technology">
-            <strong>
-              <a href="#ram-technology" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>RAM Technology</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#types-of-dram" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Types of DRAM</a>
+              </strong>
+            </div>
+          </div>
+          <div id="ram-technology">
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#ram-technology" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>RAM Technology</a>
+              </strong>
+            </div>
           </div>
 
           <div id="installing-and-configuring-pc-expansion-cards">
-            <strong>
-              <a href="#installing-and-configuring-pc-expansion-cards" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Installing and configuring PC expansion cards</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#installing-and-configuring-pc-expansion-cards" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Installing and configuring PC expansion cards</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -833,51 +1216,68 @@ function App() {
         <div id="module-5" className='p-2'>
           <h1 className='mb-10'>Storage</h1>
           <div id="storage-overview">
-            <strong>
-              <a href="#storage-overview" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Storage Overview</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#storage-overview" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Storage Overview</a>
+              </strong>
+            </div>
           </div>
 
           <div id="magnetic-storage">
-            <strong>
-              <a href="#magnetic-storage" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Magnetic Storage</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#magnetic-storage" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Magnetic Storage</a>
+              </strong>
+            </div>
           </div>
 
           <div id="optical-media">
-            <strong>
-              <a href="#optical-media" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Optical Media</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#optical-media" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Optical Media</a>
+              </strong>
+            </div>
           </div>
 
           <div id="solid-state-media">
-            <strong>
-              <a href="#solid-state-media" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Solid State Media</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#solid-state-media" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Solid State Media</a>
+              </strong>
+            </div>
           </div>
 
           <div id="connecting-devices">
-            <strong> <a href="#connecting-devices" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Connecting Devices</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#connecting-devices" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Connecting Devices</a>
+              </strong>
+            </div>
           </div>
         </div>
         {/* module 6 */}
         <div id="module-6" className='p-2'>
           <h1 className='mb-10'>Power</h1>
           <div id="power-basics">
-            <strong>
-              <a href="#power-basics" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Power Basics</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#power-basics" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Power Basics</a>
+              </strong>
+            </div>
           </div>
           <div id="protection-and-tools">
-            <strong>
-              <a href="#protection-and-tools" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Protection and Tools</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#protection-and-tools" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Protection and Tools</a>
+              </strong>
+            </div>
           </div>
           <div id="power-supplies-and-connectors">
-            <strong>
-              <a href="#power-supplies-and-connectors" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Power Supplies and Connectors</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#power-supplies-and-connectors" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Power Supplies and Connectors</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -885,14 +1285,18 @@ function App() {
         <div id="module-7" className='p-2'>
           <h1 className='mb-10'>Chassis</h1>
           <div id="chassis-form-factors">
-            <strong>
-              <a href="#chassis-form-factors" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Form Factors</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#chassis-form-factors" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Form Factors</a>
+              </strong>
+            </div>
           </div>
           <div id="layout">
-            <strong>
-              <a href="#layout" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Layout</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#layout" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Layout</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -900,19 +1304,25 @@ function App() {
         <div id="module-8" className='p-2'>
           <h1 className='mb-10'>Build the Computer</h1>
           <div id="esd">
-            <strong>
-              <a href="#esd" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>ESD</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#esd" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>ESD</a>
+              </strong>
+            </div>
           </div>
           <div id="chassis-motherboard-cpu-ram">
-            <strong>
-              <a href="#chassis-motherboard-cpu-ram" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Chassis Motherboard CPU RAM</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#chassis-motherboard-cpu-ram" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Chassis Motherboard CPU RAM</a>
+              </strong>
+            </div>
           </div>
           <div id="bower-storage-and-booting">
-            <strong>
-              <a href="#bower-storage-and-booting" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Bower Storage and Booting</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#bower-storage-and-booting" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Bower Storage and Booting</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -920,29 +1330,39 @@ function App() {
         <div id="module-9" className='p-2'>
           <h1 className='mb-10'>Laptop</h1>
           <div id="ports-keyboard-pointing-devices">
-            <strong>
-              <a href="#ports-keyboard-pointing-devices" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Ports Keyboard Pointing Devices</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#ports-keyboard-pointing-devices" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Ports Keyboard Pointing Devices</a>
+              </strong>
+            </div>
           </div>
           <div id="video-and-sound">
-            <strong>
-              <a href="#video-and-sound" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Video and Sound</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#video-and-sound" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Video and Sound</a>
+              </strong>
+            </div>
           </div>
           <div id="storage-and-power">
-            <strong>
-              <a href="#storage-and-power" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Storage and Power</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#storage-and-power" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Storage and Power</a>
+              </strong>
+            </div>
           </div>
           <div id="expansion-devices-and-communications">
-            <strong>
-              <a href="#expansion-devices-and-communications" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Expansion Devices & Communications</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#expansion-devices-and-communications" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Expansion Devices & Communications</a>
+              </strong>
+            </div>
           </div>
           <div id="memory-motherboard-and-cpu">
-            <strong>
-              <a href="#memory-motherboard-and-cpu" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Memory Motherboard and CPU </a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#memory-motherboard-and-cpu" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Memory Motherboard and CPU </a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -950,34 +1370,46 @@ function App() {
         <div id="module-10" className='p-2'>
           <h1 className='mb-10'>Windows</h1>
           <div id="requirements-versions-and-tools">
-            <strong>
-              <a href="#requirements-versions-and-tools" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Requirements Versions and Tools</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#requirements-versions-and-tools" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Requirements Versions and Tools</a>
+              </strong>
+            </div>
           </div>
           <div id="installation">
-            <strong>
-              <a href="#installation" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Installation</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#installation" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Installation</a>
+              </strong>
+            </div>
           </div>
           <div id="migration-and-customization">
-            <strong>
-              <a href="#migration-and-customization" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Migration and Customization</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#migration-and-customization" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Migration and Customization</a>
+              </strong>
+            </div>
           </div>
           <div id="files">
-            <strong>
-              <a href="#files" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Files</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#files" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Files</a>
+              </strong>
+            </div>
           </div>
           <div id="windows-8-and-windows-8-1">
-            <strong>
-              <a href="#windows-8-and-windows-8-1" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Windows 8 and Windows 8.1 Features</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#windows-8-and-windows-8-1" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Windows 8 and Windows 8.1 Features</a>
+              </strong>
+            </div>
           </div>
           <div id="file-systems-and-disk-management">
-            <strong>
-              <a href="#file-systems-and-disk-management" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>File Systems and Disk Management</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#file-systems-and-disk-management" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>File Systems and Disk Management</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -985,24 +1417,32 @@ function App() {
         <div id="module-11" className='p-2'>
           <h1 className='mb-10'>Windows Configuration</h1>
           <div id="user-interfaces">
-            <strong>
-              <a href="#user-interfaces" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>User Interfaces</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#user-interfaces" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>User Interfaces</a>
+              </strong>
+            </div>
           </div>
           <div id="applications">
-            <strong>
-              <a href="#applications" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Applicatioins</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#applications" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Applicatioins</a>
+              </strong>
+            </div>
           </div>
           <div id="tools-and-utilities">
-            <strong>
-              <a href="#tools-and-utilities" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Tools & Utilities</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#tools-and-utilities" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Tools & Utilities</a>
+              </strong>
+              /</div>
           </div>
           <div id="os-optimization-and-power-management">
-            <strong>
-              <a href="#os-optimization-and-power-management" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>OS Optimization and Power Management</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#os-optimization-and-power-management" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>OS Optimization and Power Management</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -1010,19 +1450,25 @@ function App() {
         <div id="module-12" className='p-2'>
           <h1 className='mb-10'>Windows Maintenance</h1>
           <div id="updating-windows">
-            <strong>
-              <a href="#updating-windows" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Updating Windows</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#updating-windows" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Updating Windows</a>
+              </strong>
+            </div>
           </div>
           <div id="hard-disk-utilities">
-            <strong>
-              <a href="#hard-disk-utilities" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Hard Disk Utilities</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#hard-disk-utilities" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Hard Disk Utilities</a>
+              </strong>
+            </div>
           </div>
           <div id="backing-up-windows-xp-vista-7-8-1">
-            <strong>
-              <a href="#backing-up-windows-xp-vista-7-8-1" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Backing up Windows (XP, Vista, 7, 8.1)</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#backing-up-windows-xp-vista-7-8-1" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Backing up Windows (XP, Vista, 7, 8.1)</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -1030,34 +1476,46 @@ function App() {
         <div id="module-13" className='p-2'>
           <h1 className='mb-10'>Troubleshooting Windows</h1>
           <div id="boot-and-recover-tools">
-            <strong>
-              <a href="#boot-and-recover-tools" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Boot and Recovery Tools</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#boot-and-recover-tools" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Boot and Recovery Tools</a>
+              </strong>
+            </div>
           </div>
           <div id="boot-errors">
-            <strong>
-              <a href="#boot-errors" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Boot Errors</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#boot-errors" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Boot Errors</a>
+              </strong>
+            </div>
           </div>
           <div id="troubleshooting-tools">
-            <strong>
-              <a href="#troubleshooting-tools" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Troubleshooting tools</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#troubleshooting-tools" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Troubleshooting tools</a>
+              </strong>
+            </div>
           </div>
           <div id="monitoring-tools">
-            <strong>
-              <a href="#monitoring-tools" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Monitoring Tools</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#monitoring-tools" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Monitoring Tools</a>
+              </strong>
+            </div>
           </div>
           <div id="stop-errors-the-blue-screen-of-death">
-            <strong>
-              <a href="#stop-errors-the-blue-screen-of-death" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Stop Errors: The Blue Screen of Death</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#stop-errors-the-blue-screen-of-death" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Stop Errors: The Blue Screen of Death</a>
+              </strong>
+            </div>
           </div>
           <div id="troubleshooting-windows-command-line-tools">
-            <strong>
-              <a href="#troubleshooting-windows-command-line-tools" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Troubleshooting Windows- Command Line Tools</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#troubleshooting-windows-command-line-tools" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Troubleshooting Windows- Command Line Tools</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -1065,24 +1523,32 @@ function App() {
         <div id="module-14" className='p-2'>
           <h1 className='mb-10'>Video</h1>
           <div id="video-card-overview">
-            <strong>
-              <a href="#video-card-overview" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Video Card Overview</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#video-card-overview" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Video Card Overview</a>
+              </strong>
+            </div>
           </div>
           <div id="installing-and-troubleshooting-video-cards">
-            <strong>
-              <a href="#installing-and-troubleshooting-video-cards" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Installing and Troubleshooting Video Cards</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#installing-and-troubleshooting-video-cards" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Installing and Troubleshooting Video Cards</a>
+              </strong>
+            </div>
           </div>
           <div id="video-displays">
-            <strong>
-              <a href="#video-displays" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Video Displays</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#video-displays" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Video Displays</a>
+              </strong>
+            </div>
           </div>
           <div id="video-settings">
-            <strong>
-              <a href="#video-settings" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Video Settings</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#video-settings" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Video Settings</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -1090,9 +1556,11 @@ function App() {
         <div id="module-15" className='p-2'>
           <h1 className='mb-10'>Audio</h1>
           <div id="audio-sound-card-overview">
-            <strong>
-              <a href="#audio-sound-card-overview" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Audio Sound Card Overview</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#audio-sound-card-overview" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Audio Sound Card Overview</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -1100,14 +1568,18 @@ function App() {
         <div id="module-16" className='p-2'>
           <h1 className='mb-10'>Peripherals</h1>
           <div id="io-ports">
-            <strong>
-              <a href="#io-ports" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Input/Outport Ports</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#io-ports" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Input/Outport Ports</a>
+              </strong>
+            </div>
           </div>
           <div id="important-devices">
-            <strong>
-              <a href="#important-devices" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Important Devices</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#important-devices" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Important Devices</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -1115,14 +1587,18 @@ function App() {
         <div id="module-17" className='p-2'>
           <h1 className='mb-10'>Configurations</h1>
           <div id="custom-computing-custom-pc-configurations">
-            <strong>
-              <a href="#custom-computing-custom-pc-configurations" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Custom Computing Custom PC Configurations</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#custom-computing-custom-pc-configurations" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Custom Computing Custom PC Configurations</a>
+              </strong>
+            </div>
           </div>
           <div id="configuring-soho-multifunction-devices">
-            <strong>
-              <a href="#configuring-soho-multifunction-devices" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Configuring SOHO Multifunction Devices</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#configuring-soho-multifunction-devices" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Configuring SOHO Multifunction Devices</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -1130,44 +1606,60 @@ function App() {
         <div id="module-18" className='p-2'>
           <h1 className='mb-10'>Printers</h1>
           <div id="printer-types-and-technologies">
-            <strong>
-              <a href="#printer-types-and-technologies" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Printer Types and Technologies</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#printer-types-and-technologies" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Printer Types and Technologies</a>
+              </strong>
+            </div>
           </div>
           <div id="virtual-print-technology">
-            <strong>
-              <a href="#virtual-print-technology" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Virtual Print Technology</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#virtual-print-technology" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Virtual Print Technology</a>
+              </strong>
+            </div>
           </div>
           <div id="printer-installation-and-configuration">
-            <strong>
-              <a href="#printer-installation-and-configuration" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Printer Installation and Configuration</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#printer-installation-and-configuration" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Printer Installation and Configuration</a>
+              </strong>
+            </div>
           </div>
           <div id="printer-management-pooling-and-troubleshooting">
-            <strong>
-              <a href="#printer-management-pooling-and-troubleshooting" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Printer Management Poolig and Troubleshooting</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#printer-management-pooling-and-troubleshooting" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Printer Management Poolig and Troubleshooting</a>
+              </strong>
+            </div>
           </div>
           <div id="laser-printer-maintenance">
-            <strong>
-              <a href="#laser-printer-maintenance" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Laser Printing Maintenance</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#laser-printer-maintenance" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Laser Printing Maintenance</a>
+              </strong>
+            </div>
           </div>
           <div id="thermal-printer-maintenance">
-            <strong>
-              <a href="#thermal-printer-maintenance" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Thermal Printer Maintenance</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#thermal-printer-maintenance" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Thermal Printer Maintenance</a>
+              </strong>
+            </div>
           </div>
           <div id="impact-printer-maintenance">
-            <strong>
-              <a href="#impact-printer-maintenance" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Impact Printer Maintenance</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#impact-printer-maintenance" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Impact Printer Maintenance</a>
+              </strong>
+            </div>
           </div>
           <div id="inkjet-printer-maintenance">
-            <strong>
-              <a href="#inkjet-printer-maintenance" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Inkjet Printer Maintenance</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#inkjet-printer-maintenance" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Inkjet Printer Maintenance</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -1175,49 +1667,67 @@ function App() {
         <div id="module-19" className='p-2'>
           <h1 className='mb-10'>Networking</h1>
           <div id="network-types-and-topologies">
-            <strong>
-              <a href="#network-types-and-topologies" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Network Types and Topologies</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#network-types-and-topologies" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Network Types and Topologies</a>
+              </strong>
+            </div>
           </div>
           <div id="network-devices">
-            <strong>
-              <a href="#network-devices" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Network Devices</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#network-devices" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Network Devices</a>
+              </strong>
+            </div>
           </div>
           <div id="cables-connectors-and-tools">
-            <strong>
-              <a href="#cables-connectors-and-tools" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Cables, Connectors, and Tools</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#cables-connectors-and-tools" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Cables, Connectors, and Tools</a>
+              </strong>
+            </div>
           </div>
           <div id="ip-addressing-and-configuration">
-            <strong>
-              <a href="#ip-addressing-and-configuration" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>IP Addressing and Configuration</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#ip-addressing-and-configuration" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>IP Addressing and Configuration</a>
+              </strong>
+            </div>
           </div>
           <div id="tcpip-protocols-and-ports">
-            <strong>
-              <a href="#tcpip-protocols-and-ports" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>TCP/IP Protocols and Ports</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#tcpip-protocols-and-ports" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>TCP/IP Protocols and Ports</a>
+              </strong>
+            </div>
           </div>
           <div id="internet-services">
-            <strong>
-              <a href="#internet-services" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Internet Services</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#internet-services" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Internet Services</a>
+              </strong>
+            </div>
           </div>
           <div id="network-setup-and-configuration">
-            <strong>
-              <a href="#network-setup-and-configuration" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Network Setup and Configuration</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#network-setup-and-configuration" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Network Setup and Configuration</a>
+              </strong>
+            </div>
           </div>
           <div id="troubleshooting-networks">
-            <strong>
-              <a href="#troubleshooting-networks" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Troubleshooting Networks</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#troubleshooting-networks" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Troubleshooting Networks</a>
+              </strong>
+            </div>
           </div>
           <div id="iot">
-            <strong>
-              <a href="#iot" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>IoT</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#iot" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>IoT</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -1225,44 +1735,60 @@ function App() {
         <div id="module-20" className='p-2'>
           <h1 className='mb-10'>Security</h1>
           <div id="malware">
-            <strong>
-              <a href="#malware" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Malware</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#malware" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Malware</a>
+              </strong>
+            </div>
           </div>
           <div id="common-security-threats-and-vulnerabilities">
-            <strong>
-              <a href="#common-security-threats-and-vulnerabilities" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Common Security Threats and Vulnerabilities</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#common-security-threats-and-vulnerabilities" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Common Security Threats and Vulnerabilities</a>
+              </strong>
+            </div>
           </div>
           <div id="unauthorized-access">
-            <strong>
-              <a href="#unauthorized-access" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Unauthorized Access</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#unauthorized-access" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Unauthorized Access</a>
+              </strong>
+            </div>
           </div>
           <div id="digital-security">
-            <strong>
-              <a href="#digital-security" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Digital Security</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#digital-security" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Digital Security</a>
+              </strong>
+            </div>
           </div>
           <div id="user-security">
-            <strong>
-              <a href="#user-security" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>User Security</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#user-security" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>User Security</a>
+              </strong>
+            </div>
           </div>
           <div id="file-security">
-            <strong>
-              <a href="#file-security" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>File Security</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#file-security" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>File Security</a>
+              </strong>
+            </div>
           </div>
           <div id="router-security">
-            <strong>
-              <a href="#router-security" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Router Security</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#router-security" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Router Security</a>
+              </strong>
+            </div>
           </div>
           <div id="wireless-security">
-            <strong>
-              <a href="#wireless-security" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Wireless Security</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#wireless-security" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Wireless Security</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -1270,59 +1796,81 @@ function App() {
         <div id="module-21" className='p-2'>
           <h1 className='mb-10'>Mobile Devices</h1>
           <div id="mobile-hardware-and-operating-systems">
-            <strong>
-              <a href="#mobile-hardware-and-operating-systems" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Mobile Hardware and Operating Systems</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#mobile-hardware-and-operating-systems" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Mobile Hardware and Operating Systems</a>
+              </strong>
+            </div>
           </div>
           <div id="mobile-hardware-and-operating-systems-1">
-            <strong>
-              <a href="#mobile-hardware-and-operating-systems-1" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Mobile Hardware and Operating Systems-1</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#mobile-hardware-and-operating-systems-1" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Mobile Hardware and Operating Systems-1</a>
+              </strong>
+            </div>
           </div>
           <div id="various-types-of-mobile-devices">
-            <strong>
-              <a href="#various-types-of-mobile-devices" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Various Types of Mobile Devices</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#various-types-of-mobile-devices" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Various Types of Mobile Devices</a>
+              </strong>
+            </div>
           </div>
           <div id="connectivity-and-networking">
-            <strong>
-              <a href="#connectivity-and-networking" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Connectivity and Networking</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#connectivity-and-networking" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Connectivity and Networking</a>
+              </strong>
+            </div>
           </div>
           <div id="connection-types">
-            <strong>
-              <a href="#connection-types" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Connection Types</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#connection-types" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Connection Types</a>
+              </strong>
+            </div>
           </div>
           <div id="accessories">
-            <strong>
-              <a href="#accessories" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Accessories</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#accessories" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Accessories</a>
+              </strong>
+            </div>
           </div>
           <div id="email-and-synchronization">
-            <strong>
-              <a href="#email-and-synchronization" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Email and Synchronization</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#email-and-synchronization" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Email and Synchronization</a>
+              </strong>
+            </div>
           </div>
           <div id="network-connectivity">
-            <strong>
-              <a href="#network-connectivity" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Network Connectivity</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#network-connectivity" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Network Connectivity</a>
+              </strong>
+            </div>
           </div>
           <div id="security">
-            <strong>
-              <a href="#security" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Security</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#security" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Security</a>
+              </strong>
+            </div>
           </div>
           <div id="security-1">
-            <strong>
-              <a href="#security-1" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Security-1</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#security-1" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Security-1</a>
+              </strong>
+            </div>
           </div>
           <div id="troubleshooting-mobile-os-and-application-security-issues">
-            <strong>
-              <a href="#troubleshooting-mobile-os-and-application-security-issues" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Troubleshooting Mobile OS and Application Security Issues</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#troubleshooting-mobile-os-and-application-security-issues" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Troubleshooting Mobile OS and Application Security Issues</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -1330,19 +1878,25 @@ function App() {
         <div id="module-22" className='p-2'>
           <h1 className='mb-10'>Technician Professionalism</h1>
           <div id="troubleshooting-process">
-            <strong>
-              <a href="#troubleshooting-process" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Troubleshooting Process</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#troubleshooting-process" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Troubleshooting Process</a>
+              </strong>
+            </div>
           </div>
           <div id="physical-safety-and-environmental-controls">
-            <strong>
-              <a href="#physical-safety-and-environmental-controls" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Physical Safety and Environmental Controls</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#physical-safety-and-environmental-controls" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Physical Safety and Environmental Controls</a>
+              </strong>
+            </div>
           </div>
           <div id="customer-relations">
-            <strong>
-              <a href="#customer-relations" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Customer Relations</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#customer-relations" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Customer Relations</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -1350,34 +1904,46 @@ function App() {
         <div id="module-23" className='p-2'>
           <h1 className='mb-10'>Tools & Best Practices</h1>
           <div id="mac-os-best-practices">
-            <strong>
-              <a href="#mac-os-best-practices" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Mac OS Best Practices</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#mac-os-best-practices" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Mac OS Best Practices</a>
+              </strong>
+            </div>
           </div>
           <div id="mac-os-tools">
-            <strong>
-              <a href="#mac-os-tools" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Mac OS Tools</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#mac-os-tools" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Mac OS Tools</a>
+              </strong>
+            </div>
           </div>
           <div id="mac-os-features">
-            <strong>
-              <a href="#mac-os-features" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Mac OS Features</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#mac-os-features" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Mac OS Features</a>
+              </strong>
+            </div>
           </div>
           <div id="linux-best-practices">
-            <strong>
-              <a href="#linux-best-practices" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Linux Best Practices</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#linux-best-practices" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Linux Best Practices</a>
+              </strong>
+            </div>
           </div>
           <div id="linux-os-tools">
-            <strong>
-              <a href="#linux-os-tools" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Linux OS Tools</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#linux-os-tools" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Linux OS Tools</a>
+              </strong>
+            </div>
           </div>
           <div id="basic-linux-commands">
-            <strong>
-              <a href="#basic-linux-commands" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Basic Linux Commands</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#basic-linux-commands" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Basic Linux Commands</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -1385,19 +1951,25 @@ function App() {
         <div id="module-24" className='p-2'>
           <h1 className='mb-10'>Cloud & Virtuaization</h1>
           <div id="basic-cloud-concepts">
-            <strong>
-              <a href="#basic-cloud-concepts" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Basic Cloud Concepts</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#basic-cloud-concepts" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Basic Cloud Concepts</a>
+              </strong>
+            </div>
           </div>
           <div id="introduction-to-virtualization">
-            <strong>
-              <a href="#introduction-to-virtualization" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Introduction to Virtualization</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#introduction-to-virtualization" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Introduction to Virtualization</a>
+              </strong>
+            </div>
           </div>
           <div id="virtualization-components-and-software-defined-networking">
-            <strong>
-              <a href="#virtualization-components-and-software-defined-networking" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Virtualization Components and Software Defined Networking</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#virtualization-components-and-software-defined-networking" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Virtualization Components and Software Defined Networking</a>
+              </strong>
+            </div>
           </div>
 
         </div>
@@ -1405,20 +1977,24 @@ function App() {
         <div id="module-25" className='p-2'>
           <h1 className='mb-10'>Server & Intrusion</h1>
           <div id="server-roles">
-            <strong>
-              <a href="#server-roles" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>Server Roles</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#server-roles" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>Server Roles</a>
+              </strong>
+            </div>
           </div>
           <div id="ids-ipm-and-utm">
-            <strong>
-              <a href="#ids-ipm-and-utm" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 '><span className='mr-2'>#</span>IDS, IPS, and UTM</a>
-            </strong>
+            <div className="border-y p-1 my-4">
+              <strong>
+                <a href="#ids-ipm-and-utm" className='text-2xl mb-4 text-black dark:text-white cursor-pointer hover:text-slate-600 dark:hover:text-red-100 my- '><span className='mr-2'>#</span>IDS, IPS, and UTM</a>
+              </strong>
+            </div>
           </div>
 
-          <div className="h-screen w-1 bg-red-100"></div>
+
         </div>
-      </main>
-    </div>
+      </main >
+    </div >
   )
 }
 
